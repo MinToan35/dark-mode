@@ -1,32 +1,73 @@
-const articles = [
+import React from 'react';
+import {
+  FaBehance,
+  FaFacebook,
+  FaLinkedin,
+  FaTwitter,
+  FaSketch,
+  FaHome,
+  FaUserFriends,
+  FaFolderOpen,
+  FaCalendarAlt,
+  FaWpforms,
+} from 'react-icons/fa';
+export const links = [
   {
     id: 1,
-    title: 'the WET Codbase',
-    date: new Date(2020, 9, 4),
-    length: 11,
-    snippet: `Come waste your time with me`,
+    url: '/',
+    text: 'home',
+    icon: <FaHome />,
   },
   {
     id: 2,
-    title: 'goodby, clean code',
-    date: new Date(2019, 10, 22),
-    length: 5,
-    snippet: `Let clean code guide you. Then let it go.`,
+    url: '/team',
+    text: 'team',
+    icon: <FaUserFriends />,
   },
   {
     id: 3,
-    title: 'my decade in review',
-    date: new Date(2018, 7, 11),
-    length: 5,
-    snippet: `A personal reflection.`,
+    url: '/projects',
+    text: 'projects',
+    icon: <FaFolderOpen />,
   },
   {
     id: 4,
-    title: 'what are the react team principles',
-    date: new Date(2015, 5, 4),
-    length: 5,
-    snippet: `UI Before API.`,
+    url: '/calendar',
+    text: 'calendar',
+    icon: <FaCalendarAlt />,
   },
-]
+  {
+    id: 5,
+    url: '/documents',
+    text: 'documents',
+    icon: <FaWpforms />,
+  },
+];
 
-export default articles
+export const social = [
+  {
+    id: 1,
+    url: 'https://www.twitter.com',
+    icon: <FaFacebook />,
+  },
+  {
+    id: 2,
+    url: 'https://www.twitter.com',
+    icon: <FaTwitter />,
+  },
+  {
+    id: 3,
+    url: 'https://www.twitter.com',
+    icon: <FaLinkedin />,
+  },
+  {
+    id: 4,
+    url: 'https://www.twitter.com',
+    icon: <FaBehance />,
+  },
+  {
+    id: 5,
+    url: 'https://www.twitter.com',
+    icon: <FaSketch />,
+  },
+];
