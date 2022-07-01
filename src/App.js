@@ -1,24 +1,21 @@
-import React from 'react'
-import { useGlobalContext } from './context'
-
-// components
-import Navbar from './Navbar'
-import CartContainer from './CartContainer'
-// items
+import React, { useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 function App() {
-  const { loading } = useGlobalContext()
-  if (loading) {
-    return (
-      <div className='loading'>
-        <h1>Loading...</h1>
-      </div>
-    )
-  }
+  const [markdown, setMarkdown] = useState('# markdown preview')
+
   return (
     <main>
-      <Navbar />
-      <CartContainer />
+      <section className='markdown'>
+        <textarea
+          className='input'
+          value={markdown}
+          onChange={(e) => setMarkdown(e.target.value)}
+        ></textarea>
+        <article className='result'>
+          <ReactMarkdown>{markdown}</ReactMarkdown>
+        </article>
+      </section>
     </main>
   )
 }
